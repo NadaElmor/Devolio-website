@@ -1,0 +1,288 @@
+/* ====================general=========== */
+:root {
+  --maincolor: #0078ff;
+}
+body {
+  background-color: #f5f5f5;
+  font-family: "Tajawal", sans-serif;
+}
+.color-blue {
+  color: var(--maincolor);
+}
+.bg-main-color {
+  background-color: var(--maincolor);
+}
+p {
+  color: #4e4e4e;
+}
+
+.underlined {
+  position: relative;
+}
+.underlined::after {
+  content: "";
+  width: 40px;
+  height: 4px;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  background-color: var(--maincolor);
+  margin-top: 5px;
+  transform: translateX(-50%);
+}
+.layer {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  background-color: #0077ffb7;
+}
+
+/* ================navbar============== */
+
+nav .nav-item a {
+  position: relative;
+}
+nav .nav-item a::after {
+  content: "";
+  width: 40px;
+  height: 2px;
+  color: white;
+  background-color: white;
+  position: absolute;
+  top: 90%;
+  left: 10%;
+  display: none;
+}
+nav .nav-item a:hover.nav-item a::after {
+  display: block;
+}
+
+/* ================header=============== */
+#home {
+  background-image: url("../images-dev/images-dev/intro-bg.jpg");
+  background-position: center center;
+  background-size: cover;
+  height: 100vh;
+}
+header .layer {
+  background-color: rgba(0, 0, 0, 0.44);
+}
+header .home-content h1 {
+  font-size: 72px;
+}
+
+#home h2::after {
+  content: "";
+  animation: move infinite 5s backwards;
+}
+
+@keyframes move {
+  1% {
+    content: "web";
+  }
+  5% {
+    content: "web dev ";
+  }
+  10% {
+    content: "web develo";
+  }
+  20% {
+    content: "web developer";
+  }
+  25% {
+    content: "web developer.|";
+  }
+  30% {
+    content: "ceo";
+  }
+  35% {
+    content: "ceo Dev";
+  }
+  45% {
+    content: "ceo Devolio";
+  }
+  50% {
+    content: "ceo Devolio.|";
+  }
+  55% {
+    content: "Gra";
+  }
+
+  60% {
+    content: "Graphic";
+  }
+  65% {
+    content: "Graphic Des";
+  }
+  70% {
+    content: "Graphic Design";
+  }
+  75% {
+    content: "Graphic Designer";
+  }
+  80% {
+    content: "Graphic Designer.|";
+  }
+  85% {
+    content: "Fron";
+  }
+  90% {
+    content: "Frontend";
+  }
+  95% {
+    content: "Frontend Dev";
+  }
+  100% {
+    content: "Frontend Developer.|";
+  }
+}
+/* ================section 1 about============ */
+#about .progress {
+  height: 0.625rem;
+}
+#about h2 {
+  position: relative;
+}
+#about h2::after {
+  content: "";
+  width: 80px;
+  height: 4px;
+  position: absolute;
+  top: 100%;
+  left: 0%;
+  background-color: var(--maincolor);
+  margin-top: 5px;
+}
+/* ===============section 2 services=========== */
+
+#services .item .icon {
+  font-size: 50px;
+  width: 120px;
+  height: 120px;
+  border: #0078ff solid 10px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+}
+#services .icon:hover {
+  border: white;
+  color: white;
+  background-color: var(--maincolor);
+  border: #cde1f8 solid 10px;
+}
+/* ===counter=== */
+#services .services-counter {
+  background-image: url("../images-dev/images-dev/counters-bg.jpg");
+  background-attachment: fixed;
+  background-position: center center;
+  background-size: cover;
+  z-index: 1;
+  padding: 70px 0;
+  position: relative;
+}
+#services .layer {
+  z-index: -1;
+}
+
+#services .services-counter .icons {
+  font-size: 30px;
+}
+#services .services-counter .icons {
+  color: white;
+  width: 70px;
+  height: 70px;
+  border: solid #cde1f8 8px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0px;
+}
+#services .counter-content p {
+  color: white;
+}
+/* ==============end section 2 services========= */
+
+/* ==============section 3 portfolio============ */
+#portfolio .portfolio-content .image-port {
+  transition: all 1s;
+}
+#portfolio .portfolio-content .item:hover {
+  cursor: pointer;
+}
+#portfolio .portfolio-content .item:hover .image-port {
+  transform: scale(1.5);
+}
+
+/* =====part 2======= */
+#portfolio .work {
+  background-image: url("../images-dev/images-dev/overlay-bg.jpg");
+  background-attachment: fixed;
+  background-position: center center;
+  background-size: cover;
+  position: relative;
+  padding: 70px 0;
+}
+
+#portfolio .comma-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+/* ====================end section 3 portfolio============ */
+/* ====================section 4 blog=================== */
+#blog .name img {
+  width: 40px;
+}
+#blog .name {
+  background-color: #f7f7f7;
+}
+/* ======================end section 4 blog==================== */
+footer {
+  background-image: url("../images-dev/images-dev/overlay-bg.jpg");
+  background-attachment: fixed;
+  background-position: center center;
+  background-size: cover;
+  padding: 70px 0px;
+  position: relative;
+  z-index: 1;
+}
+footer form input,
+textarea {
+  padding: 5px;
+  margin-top: 0.9375rem;
+  margin-bottom: 0.9375rem;
+  border: solid 1px rgba(151, 149, 149, 0.284);
+  border-radius: 5px;
+}
+footer .underlined::after {
+  width: 100px;
+  left: 20%;
+}
+.social-icons i {
+  font-size: 20px;
+  width: 40px;
+  height: 40px;
+  border: #0078ff solid 3px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+  margin: 5px;
+}
+footer .social-icons i:hover {
+  border: white;
+  color: white;
+  background-color: var(--maincolor);
+  border: #cde1f8 solid 3px;
+  cursor: pointer;
+}
+footer .layer {
+  z-index: -1;
+}
